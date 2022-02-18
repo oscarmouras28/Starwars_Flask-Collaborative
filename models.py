@@ -1,10 +1,10 @@
-from flask import SQLalchemy
+from flask_sqlalchemy import SQLAlchemy
 
-d = SQLalchemy()
+d = SQLAlchemy()
 
-class User(d.ModeL):
+class User(d.Model):
     id = d.Column(d.Integer, primary_key=True)
-    name= d.column(d.String(250), nullable=False)
+    name= d.Column(d.String(250), nullable=False)
 
     def serialize(self):
         return{
@@ -14,9 +14,9 @@ class User(d.ModeL):
     def __repr__(self):
         return "<User %r>" % self.name
     
-class Favorite(d.ModeL):
+class Favorite(d.Model):
     id = d.Column(d.Integer, primary_key=True)
-    name= d.column(d.String(250), nullable=False)
+    name= d.Column(d.String(250), nullable=False)
 
     def serialize(self):
         return{
@@ -26,9 +26,9 @@ class Favorite(d.ModeL):
     def __repr__(self):
         return "<Favorite %r>" % self.name
     
-class Person(d.ModeL):
+class Person(d.Model):
     id = d.Column(d.Integer, primary_key=True)
-    name= d.column(d.String(250), nullable=False)
+    name= d.Column(d.String(250), nullable=False)
 
     def serialize(self):
         return{
@@ -38,9 +38,9 @@ class Person(d.ModeL):
     def __repr__(self):
         return "<Person %r>" % self.name
     
-class Vehicle(d.ModeL):
+class Vehicle(d.Model):
     id = d.Column(d.Integer, primary_key=True)
-    name= d.column(d.String(250), nullable=False)
+    name= d.Column(d.String(250), nullable=False)
 
     def serialize(self):
         return{
@@ -50,9 +50,9 @@ class Vehicle(d.ModeL):
     def __repr__(self):
         return "<Vehicle %r>" % self.name
     
-class Planet(d.ModeL):
+class Planet(d.Model):
     id = d.Column(d.Integer, primary_key=True)
-    name= d.column(d.String(250), nullable=False)
+    name= d.Column(d.String(250), nullable=False)
 
     def serialize(self):
         return{

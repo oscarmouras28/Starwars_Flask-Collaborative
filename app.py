@@ -1,7 +1,7 @@
 import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from models import d
+from models import d, User
 from flask_migrate import Migrate
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
